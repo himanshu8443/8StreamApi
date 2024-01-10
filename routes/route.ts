@@ -6,6 +6,6 @@ import { createProxyMiddleware } from "http-proxy-middleware";
 const router = express.Router();
 
 router.get("/mediaInfo", mediaInfo);
-router.get("/getStream", getStream);
+router.post("/getStream", getStream);
 
 export default router;

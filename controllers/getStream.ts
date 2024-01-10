@@ -15,12 +15,7 @@ export default async function getStream(req: Request, res: Response) {
     const link = await axios.get(`${process.env.BASE_URL}/playlist/${path}`, {
       headers: {
         "X-Csrf-Token": key,
-        Referer: `https://allmovieland.fun/`,
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        Origin: process.env.BASE_URL,
-        "User-Agent":
-          "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
+        Referer: `https://google.com/`,
       },
     });
     res.json({
