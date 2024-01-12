@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { getInfo } from "../lib/getInfo";
+import getInfo from "../lib/getInfo";
 
 export default async function mediaInfo(req: Request, res: Response) {
   const { id } = req.query;
