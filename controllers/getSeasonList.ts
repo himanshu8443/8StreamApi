@@ -44,7 +44,11 @@ export default async function getSeasonList(req: Request, res: Response) {
       return res.json({
         success: true,
         data: {
-          lang,
+          seasons: [
+            {
+              lang,
+            },
+          ],
           type: "movie",
         },
       });
