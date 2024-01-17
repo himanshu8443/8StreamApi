@@ -4,10 +4,3 @@ services:
     env: docker
     repo: https://github.com/himanshu8443/8StreamApi.git
     branch: main
-    buildCommand: docker build -t 8streamapi .
-    startCommand: docker run -p 3000:3000 my-node-app
-    envVars:
-      - key: PORT
-        value: 3000
-      - key: BASE_URL
-        value: https://firtorent-yult-i-274.site
