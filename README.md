@@ -1,3 +1,4 @@
+
 ![8-stream-high-resolution-logo-transparent](https://github.com/himanshu8443/HayasakaStream/assets/99420590/813cca3a-a3c3-4f40-8a79-df5b866edf68)
  - Api provides Movies/Series streaming links by IMDB IDs.
  - Most commonly provided languages - Hindi, English, Tamil, Telugu, Bengali.
@@ -7,94 +8,124 @@ Don't use the API provided for trying as it is rate-limited and hosted on a very
 
 #  Documentation
 ## Get media Info
-Provides information about movie/series which includes
-
- - totalSeasons -  total available seasons (0 for movies).
- - totalEpisodesS1 - total available Episodes in Season 1 (0 for movies).
- - languages - available languages array.
+Provides information file and key which is used to get steram link.
  
-**Endpoint** - `/api/v1/mediaInfo?id=tt1190634`
+**Endpoint** - `/api/v1/mediaInfo?id=tt1877830`
 
 **Response** - 
-```bash
+```
 {
     "success": true,
     "data": {
-        "totalSeasons": 3,
-        "totalEpisodesS1": 8,
-        "languages": [
+        "playlist": [
             {
-                "id": 1,
-                "name": "Hindi"
+                "title": "Hindi",
+                "id": "24b8c045e7fcd28fb2ee654de75a5771",
+                "file": "~0ALZ3tMP71lNTMdSBfbldjRRjLuTyceuX41C5TkTXfD5VWq-lExFCZWoHOr3rx1BLk-Ry-BI+1M3g7u6Q0QsROSCWkIPm+0O8vejnftI6c$ikYspRLC6glMxcYFec8ILFBLrTT4uOs8fE4dx3aDu-t88g5aAHsTgfyOLYS0QyxEAmJqa5ryEoOLK4jb3zPPMjxWqtE9-TYbnE9UI$OJxw7N1H5+yiCSPmxCp4DECTluWeWV9j-g5+9up7XkQ0Q-rF6yEeqtNbUIqJohUOXhWet7aGgLwzSd7RldFBs+8hfQ!"
             },
             {
-                "id": 2,
-                "name": "English"
+                "title": "English",
+                "id": "fd93fd0a7fc57f1e0c9c54110322a05f",
+                "file": "~GTE1z8T8rAcuWI3QaGEKR0oNFlOEr6grKv-lGchVBqFrFXq0BU5tJswuynqZcHf8IB8hXkLSozWK1LsrFKn9UFuo1FsNYq4obBiEA$SKYEqXZ6iKR4PB6wnPpkU$6ZI5pRHPJZIgJAGNKv+RbbDRCGc50wFuraeCa8Mn9Q114FD1Kk1XBBHeafA-yqYcRoyFmLoOjW8jpaT-qMEdVwrPqAjIx3K40BU1piKi3wYFA1CTLSERXQRUUYMB9847FkbOfhlHxchONfrwcja0+NM1-hU$+$8ARCprBKD8R77JzcY!"
+            },
+            {
+                "title": "Bengali",
+                "id": "514592bb6a9ddefadbac9a0a3d5853d0",
+                "file": "~8i-Mu-WONoEdJ9whQe+Ldow7qCqtzIq7BVxxzRem-s+-SF5sgmF3n8Q1g$ZUztNliWstIDp+mAjzbZyZJvBpfhcTLc4XdEsjPYOVJon193lL+dlYNX1yfJIm1TMMlVEl+illL+C3yG-L41UDM3N-Ovju6q+qbKJ6fFzDcEiaAQ4r8AEPfiAir3qNz3XdS+CELa4-TZp$MFGJ89wW0-hEgC1SsvpeT8xwztjMTfd6oonUA4qJAqXXDGGnwZWB$OXFxy9q4sezs3yCEtSp$eYxEXdyWvzZBp0mT-baIkot7$s!"
+            },
+            {
+                "title": "Tamil",
+                "id": "38d4c32d7e29000d506ce2f8f6270baf",
+                "file": "~5A+LJm$L$KlNx7kfKAT5j+H4A9ISTI$hdS8qx8DVIpzz3$QvThc1r8oj-ZwgvDk-4R$dikyvfN1vhcmxQ5LaxMcXOgd9M5$0xST3-NHirwI0iCWN0HevWfmK-GyRWHFbaN7+xjblvFkgjL9EmHnh$D8Avci1RYSJfN0LuqqoJB3nV0+hFGys4KYUMlnJhLWbl1k5R3AMNOr-sLG8wCheNemp74hcSk4+IVXnjCu$K5StEbejCNb$1yXPkjF6ucAbV7ZZp-Rr+wZagGSwA+sGLTmAk-Uk3R1HgyAmO$JVsQM!"
+            },
+            {
+                "title": "Telugu",
+                "id": "693e0bcfca53a67473f24b20e72bbcdc",
+                "file": "~MxqPD98luqAA3ynyU6pk-AeOQl$WkokFfUUWNv9JODWbaQ7FI6YXr6Jt7$HANlffMb3JMFyzALQRHlVyxwwLlpLrLKMmgZr-ACmNldEysL15fwab$-4WFMSPTqNyw56Np4LYZ7kVsjZexZz0rk0WK+iNAn6en63+CM1ZSFpAWMeR5Ync5rZ-JfjINucVzaobO75PAaax7XbzbTFsYfPlkCMQHBjU39vfjwg3Px9iv7DKT1kayBWxqyqEgx1jILeb48eqhhtq8JuhPYqatZ1FqfRtz8IYUOx1mdBokw9dutY!"
             }
-        ]
+        ],
+        "key": "yZBAPr58y7RIOpj4K$VhgXhXBTHz-bmW++CaWFtWPFaIMUpqmVCnuRc0IXnytMAf"
     }
 }
 ```
 
-**Link** - [try](https://hayasaka-stream.onrender.com/api/v1/mediaInfo?id=tt1190634)
+**Try** - [try](https://hayasaka-stream.onrender.com/api/v1/mediaInfo?id=tt1190634)
 
-|Query|Description  |
-|--|--|
-|id|IMDB ID of movie/series
+|Query|Description|Required|Method
+|--|--|--|--
+|id|IMDB ID of movie/series|True|Get
 
-## Get total episodes
-Provides total available episodes in season.
+## Get getSeasonList
+Provides available season, episodes and language info
 
-**Endpoint** - `/api/v1/getEpisodes?id=tt1190634&season=2&lang=1`
+**Endpoint** - `/api/v1/getSeasonList?id=tt11737520`
 
 **Response** - 
 ```bash
 {
     "success": true,
     "data": {
-        "totalEpisodes": 8
+        "seasons": [
+            {
+                "season": "Season 1",
+                "totalEpisodes": 8,
+                "lang": [
+                    "Hindi",
+                    "English"
+                ]
+            }
+        ],
+        "type": "tv"
     }
 }
 ```
 
-**Link** -  [try](https://hayasaka-stream.onrender.com/api/v1/getEpisodes?id=tt1190634&season=2&lang=5)
+**Try** -  [try](https://hayasaka-stream.onrender.com/api/v1/getEpisodes?id=tt1190634&season=2&lang=5)
 
 |Query|Description  | required
 |--|--| --|
 |id|IMDB ID of movie/series  |true
-|season|Season number|true
-|lang|Language ID (get from media info)|optional, default=Ist lang
+
 
 ## Get Stream
 Provides stream link.
-**Endpoint** - `/api/v1/getStream?id=tt1190634&season=1&episode=4&lang=1`
+**Endpoint** - `/api/v1/getStream`
+
+**Method** - POST
 
 **Response** - 
 ```bash
 {
-    "success": true,
-    "data": {
-        "StreamLink": "https://i-cdn-0.esh-bostewsom-i-273.site/stream2/i-cdn-0/5dbfd06abb47939136d00ae64c3fd2a1/MJTMsp1RshGTygnMNRUR2N2MSlnWXZEdMNDZzQWe5MDZzMmdZJTO1R2RWVHZDljekhkSsl1VwYnWtx2cihVT2p1VRlXTEpEaZRFar1kMNdnWXVUMOJjWp90RZBjT6tWNOJTWw40VKxWTyEVP:1704097846:42.105.75.152:44c0da99f4017925dceb5db7a6392941801f9c6273748c401bf12238b0adfd68/index.m3u8"
-    }
+  "success": true,
+  "data": {
+    "link": "https://i-arch-400.friness-cherlormur-i-275.site/stream2/i-arch-400/2e69c15cc905832c1f9f8d93d594b928/MJTMsp1RshGTygnMNRUR2N2MSlnWXZEdMNDZzQWe5MDZzMmdZJTO1R2RWVHZDljekhkSsl1VwYnWtx2cihVT2lVbZJzTX1kMNRVQw0keNdnWqlVeZdVW65ERNFjWUVkeNpmRr5EVVd3TUFVP:1705469597:103.74.72.126:069d121bf24da6b6e19060020f57bfcd8812645bc1f289e36d9cc5381866a015/index.m3u8"
+  }
 }
 ```
 
-**Link** - [try](https://hayasaka-stream.onrender.com/api/v1/getStream?id=tt1190634&season=1&episode=4&lang=1)
-
-|Query|Description  | required
+|Body|Description  | required
 |--|--| --|
-|id|IMDB ID of movie/series  |true
-|season|Season number|optional, default=1
-|lang|Language ID (get from media info)|true
-|episode|Episode number|optional, default=1
+file|get it form mediaInfo | true
+key |get it form mediaInfo |true
+
+**Example**
+```bash
+fetch('https://example.com/api/v1/getStream',
+ { method: 'POST', headers: { 'Content-Type': 'application/json' },
+ body: JSON.stringify({ filePath: '~8i-Mu-WONoEdJ9whQe+Ldow...', 
+ key: 'rcbeUV3KoCw-dSFJ-vN$-JwI4OXlCmOaAx05HkWyclbx46SNcazmpYmnFTXoNjo' }) }) 
+ .then(response => response.json()) 
+ .then(data =>  console.log(data)) 
+ .catch(error =>  console.error(error));
+```
 
 # Installation
   ```
-   git clone https://github.com/himanshu8443/8Stream.git
+   git clone https://github.com/himanshu8443/8StreamApi.git
   ```
 
  ```
-  cd 8Stream
+  cd 8StreamApi
 ```
  ### node
   ```
@@ -105,7 +136,7 @@ Provides stream link.
    
 ###  docker
 ```
-docker build -t 8Stream .
+docker build -t 8StreamApi .
 ```
 ```
 docker run -p 3000:3000 -it -d 8Stream
