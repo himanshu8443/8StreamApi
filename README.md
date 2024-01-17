@@ -4,7 +4,7 @@
  - Most commonly provided languages - Hindi, English, Tamil, Telugu, Bengali.
  
 ## Note 
-Don't use the API provided for trying as it is rate-limited and hosted on a very low-powered machine(on render) so have a bad response time. But, you can Deploy your instance.
+Don't use the API provided for trying as it is rate-limited and hosted on render free tier.
 
 #  Documentation
 ## Get media Info
@@ -49,7 +49,7 @@ Provides information file and key which is used to get steram link.
 }
 ```
 
-**Try** - [try](https://hayasaka-stream.onrender.com/api/v1/mediaInfo?id=tt1190634)
+**Try** - [try](https://eightstreamapi.onrender.com/api/v1/mediaInfo?id=tt1877830)
 
 |Query|Description|Required|Method
 |--|--|--|--
@@ -80,7 +80,7 @@ Provides available season, episodes and language info
 }
 ```
 
-**Try** -  [try](https://hayasaka-stream.onrender.com/api/v1/getEpisodes?id=tt1190634&season=2&lang=5)
+**Try** -  [try](https://eightstreamapi.onrender.com/api/v1/getSeasonList?id=tt11737520)
 
 |Query|Description  | required
 |--|--| --|
@@ -136,8 +136,12 @@ fetch('https://example.com/api/v1/getStream',
    
 ###  docker
 ```
-docker build -t 8StreamApi .
+docker build -t 8Streamapi .
 ```
 ```
 docker run -p 3000:3000 -it -d 8Stream
 ```
+
+# Deploy
+## Vercel - [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhimanshu8443%2F8StreamApi)
+## Render - [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/himanshu8443/8StreamApi)
