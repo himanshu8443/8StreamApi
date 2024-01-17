@@ -136,10 +136,10 @@ fetch('https://example.com/api/v1/getStream',
    
 ###  docker
 ```
-docker build -t 8Streamapi .
+docker build -t 8streamapi .
 ```
 ```
-docker run -p 3000:3000 -it -d 8Stream
+docker run -p 3000:3000 -it -d 8streamapi
 ```
 
 # Deploy
