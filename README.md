@@ -144,4 +144,5 @@ docker run -p 3000:3000 -it -d 8Stream
 
 # Deploy
 ## Vercel - [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhimanshu8443%2F8StreamApi)
+Note- vercel free tier serverless response time limit is 10 sec and will stop if took longer
 ## Render - [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/himanshu8443/8StreamApi)
