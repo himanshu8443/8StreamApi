@@ -2,9 +2,6 @@
 ![8-stream-high-resolution-logo-transparent](https://github.com/himanshu8443/HayasakaStream/assets/99420590/813cca3a-a3c3-4f40-8a79-df5b866edf68)
  - Api provides Movies/Series streaming links by IMDB IDs.
  - Most commonly provided languages - Hindi, English, Tamil, Telugu, Bengali.
- 
-## Note 
-Don't use the API provided for trying as it is rate-limited and hosted on render free tier.
 
 #  Documentation
 ## Get media Info
@@ -112,8 +109,10 @@ key |get it form mediaInfo |true
 ```bash
 fetch('https://example.com/api/v1/getStream',
  { method: 'POST', headers: { 'Content-Type': 'application/json' },
- body: JSON.stringify({ filePath: '~8i-Mu-WONoEdJ9whQe+Ldow...', 
- key: 'rcbeUV3KoCw-dSFJ-vN$-JwI4OXlCmOaAx05HkWyclbx46SNcazmpYmnFTXoNjo' }) }) 
+ body: JSON.stringify(
+{ file: '~8i-Mu-WONoEdJ9whQe+Ldow...', 
+ key: 'rcbeUV3KoCw-dSFJ-vN$-JwI4OXlCmOaAx05HkWyclbx46SNcazmpYmnFTXoNjo' }
+)}) 
  .then(response => response.json()) 
  .then(data =>  console.log(data)) 
  .catch(error =>  console.error(error));
@@ -136,12 +135,13 @@ fetch('https://example.com/api/v1/getStream',
    
 ###  docker
 ```
-docker build -t 8Streamapi .
+docker build -t 8streamapi .
 ```
 ```
-docker run -p 3000:3000 -it -d 8Stream
+docker run -p 3000:3000 -it -d 8streamapi
 ```
 
 # Deploy
 ## Vercel - [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fhimanshu8443%2F8StreamApi)
+Note- vercel free tier serverless response time limit is 10 sec and will stop if took longer
 ## Render - [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/himanshu8443/8StreamApi)
