@@ -18,7 +18,7 @@ RUN adduser -D myuser
 USER myuser
 
 ENV PORT=3000 \
-    BASE_URL=https://friness-cherlormur-i-275.site
+    BASE_URL=https://gregarpor-roundens-i-276.site
 EXPOSE 3000 
 
 CMD ["npm", "start"]  
