@@ -18,7 +18,7 @@ RUN adduser -D myuser
 USER myuser
 
 ENV PORT=3000 \
-    BASE_URL=https://thodian-creachines-i-278.site
+    BASE_URL=https://allmovieland.co/player.js?v=60%20128
 EXPOSE 3000 
 
 CMD ["npm", "start"]  

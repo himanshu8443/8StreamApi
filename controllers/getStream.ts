@@ -1,5 +1,6 @@
 import axios from "axios";
 import { Request, Response } from "express";
+import { getPlayerUrl } from "../lib/getPlayerUrl";
 
 export default async function getStream(req: Request, res: Response) {
   const { file, key } = req.body;
@@ -12,7 +13,8 @@ export default async function getStream(req: Request, res: Response) {
   const f = file as string;
   const path = f.slice(1) + ".txt";
   try {
-    const link = await axios.get(`${process.env.BASE_URL}/playlist/${path}`, {
+    const playerUrl = getPlayerUrl();
+    const link = await axios.get(`${playerUrl}/playlist/${path}`, {
       headers: {
         Accept: "*/*",
         "Accept-Encoding": "gzip, deflate, br",
