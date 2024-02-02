@@ -13,7 +13,7 @@ export default async function getStream(req: Request, res: Response) {
   const f = file as string;
   const path = f.slice(1) + ".txt";
   try {
-    const playerUrl = getPlayerUrl();
+    const playerUrl = await getPlayerUrl();
     const link = await axios.get(`${playerUrl}/playlist/${path}`, {
       headers: {
         Accept: "*/*",
