@@ -46,7 +46,7 @@ Provides information file and key which is used to get steram link.
 }
 ```
 
-**Try** - [try](https://eightstreamapi.onrender.com/api/v1/mediaInfo?id=tt1877830)
+**Try** - [try](https://8-stream-api.vercel.app/api/v1/mediaInfo?id=tt1877830)
 
 |Query|Description|Required|Method
 |--|--|--|--
@@ -77,7 +77,7 @@ Provides available season, episodes and language info
 }
 ```
 
-**Try** -  [try](https://eightstreamapi.onrender.com/api/v1/getSeasonList?id=tt11737520)
+**Try** -  [try](https://8-stream-api.vercel.app/api/v1/getSeasonList?id=tt11737520)
 
 |Query|Description  | required
 |--|--| --|
