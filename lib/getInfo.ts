@@ -48,7 +48,8 @@ export default async function getInfo(id: string) {
     const data = JSON.parse(content);
     const file = data["file"];
     const key = data["key"];
-    const playlistRes = await axios.get(`${playerUrl}${file}`, {
+    const link = file?.startsWith("http") ? file : `${playerUrl}${file}`;
+    const playlistRes = await axios.get(link, {
       headers: {
         "User-Agent":
           "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/119.0.0.0 Safari/537.36",
@@ -70,8 +71,8 @@ export default async function getInfo(id: string) {
         key,
       },
     };
-  } catch (error) {
-    console.log(error);
+  } catch (error: any) {
+    console.log(error?.message || error);
     return {
       success: false,
       message: "Something went wrong",
