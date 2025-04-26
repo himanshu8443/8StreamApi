@@ -6,6 +6,9 @@ import rateLimit from "express-rate-limit";
 
 const app = express();
 
+// Trust the proxy
+app.set("trust proxy", 1);
+
 app.use(
   cors({
     origin: "*",
@@ -13,18 +16,22 @@ app.use(
     methods: ["GET", "POST", "PUT", "DELETE"],
   })
 );
+
 dotenv.config();
 app.use(express.json());
 
 const limiter = rateLimit({
-  windowMs: 5 * 60 * 1000, // 15 minutes
-  max: 10, // 100 requests per window
+  windowMs: 5 * 60 * 1000, // 5 minutes
+  max: 10, // Max 10 requests per window
   message: "Too many requests, please try again later.",
 });
+
 if (process.env.RATE_LIMIT === "true") {
   app.use(limiter);
 }
+
 app.use("/api/v1", router);
+
 app.get("/", (req, res) => {
   res.send("its ok");
 });
