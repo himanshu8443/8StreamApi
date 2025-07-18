@@ -3,6 +3,7 @@
  - Api provides Movies/Series streaming links by IMDB IDs.
  - Most commonly provided languages - Hindi, English, Tamil, Telugu, Bengali.
 
+# Not Maintained now
 #  Documentation
 ## Get media Info
 Provides information file and key which is used to get steram link.
